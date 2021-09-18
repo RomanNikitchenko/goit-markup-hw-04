@@ -19,6 +19,7 @@
   --bg-color-white: #ffffff;
   --bg-color-light: #f5f4fa;
   --bg-color-hero: #c4c4c4;
+  --bg-color-footer: #2f303a;
   --block-border-line: #ececec;
   --card-border-color: #eeeeee;
 }
@@ -108,7 +109,6 @@ p {
 .site-nav .link,
 .contact-nav .link {
   display: block;
-
   color: var(--title-text-color);
   font-weight: 500;
   line-height: 1.15;
@@ -213,6 +213,8 @@ p {
 .filter .button:focus {
   color: var(--text-color-white);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /*section*/
@@ -243,6 +245,11 @@ p {
   margin-left: -30px;
 }
 
+.feature-list .item {
+  margin-left: 30px;
+  flex-basis: calc(100% / 4 - 30px);
+}
+
 .feature-list .item::before {
   display: block;
   content: '';
@@ -257,11 +264,6 @@ p {
 
 .feature-list .item:nth-child(1)::before {
   background-image: url(../images/antenna.svg);
-}
-
-.feature-list .item {
-  margin-left: 30px;
-  flex-basis: calc(100% / 4 - 30px);
 }
 
 .feature-list .title {
@@ -307,10 +309,13 @@ p {
   text-align: center;
   margin-left: 30px;
   flex-basis: calc(100% / 4 - 30px);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-member .bottom-description {
-  padding: 30px 0;
+  padding: 30px 32px;
 }
 
 .bottom-description .title {
@@ -323,6 +328,46 @@ p {
 .bottom-description .text {
   font-size: 16px;
   line-height: 1.18;
+}
+.bottom-description .social-links {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+}
+
+.social-links .item {
+  margin-left: 10px;
+  margin-top: 16px;
+}
+
+.social-links .link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social-links .link:hover {
+  background-color: var(--accent-color);
+}
+
+.link.instagram {
+  background-image: url(../images/instagram.svg);
+}
+
+.link.twitter {
+  background-image: url(../images/twitter.svg);
+}
+
+.link.facebook {
+  background-image: url(../images/facebook.svg);
+}
+
+.link.linkedin {
+  background-image: url(../images/linkedin.svg);
 }
 
 /*page portfolio our work*/
@@ -362,7 +407,7 @@ p {
 
 /*footer*/
 .page-footer {
-  background-color: var(--bg-color-hero);
+  background-color: var(--bg-color-footer);
   color: var(--text-color-white);
   padding-top: 60px;
   padding-bottom: 60px;
