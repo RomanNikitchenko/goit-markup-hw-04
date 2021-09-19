@@ -101,9 +101,12 @@ p {
   margin-left: auto;
 }
 
-.site-nav .item:not(:last-child),
-.contact-nav .item:not(:last-child) {
+.site-nav .item:not(:last-child) {
   margin-right: 50px;
+}
+
+.contact-nav .item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .site-nav .link,
@@ -121,6 +124,8 @@ p {
 }
 
 .contact-nav .link {
+  display: flex;
+  align-items: center;
   color: var(--primary-text-color);
 }
 
@@ -129,6 +134,26 @@ p {
 .contact-nav .link:hover,
 .contact-nav .link:focus {
   color: var(--accent-color);
+}
+
+.contact-nav .link::before {
+  content: ' ';
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
+}
+
+.contact-nav .item:nth-child(1) .link::before {
+  width: 16px;
+  height: 12px;
+  background-image: url(../images/envelope.svg);
+}
+
+.contact-nav .item:nth-child(2) .link::before {
+  width: 10px;
+  height: 16px;
+  background-image: url(../images/smartphone.svg);
 }
 
 /* main */
