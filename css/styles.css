@@ -274,19 +274,19 @@ p {
   flex-basis: calc(100% / 4 - 30px);
 }
 
-.feature-list .item::before {
-  display: block;
-  content: '';
+.feature-list .for-icon {
+  display: flex;
+  width: 100%;
   height: 120px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-color: var(--bg-color-light);
   border-radius: 4px;
   margin-bottom: 30px;
 }
 
-.feature-list .item:nth-child(1)::before {
-  background-image: url(../images/antenna.svg);
+.for-icon .icon {
+  width: 70px;
+  height: 70px;
+  margin: auto;
 }
 
 .feature-list .title {
