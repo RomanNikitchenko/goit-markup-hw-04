@@ -22,6 +22,8 @@
   --bg-color-footer: #2f303a;
   --block-border-line: #ececec;
   --card-border-color: #eeeeee;
+  --color4: #afb1b8;
+  --color3: #757575;
 }
 
 body {
@@ -129,31 +131,28 @@ p {
   color: var(--primary-text-color);
 }
 
+.contact-nav .icon {
+  margin-right: 10px;
+  fill: var(--color3);
+}
+
+.contact-nav .item:nth-child(1) .icon {
+  width: 16px;
+  height: 12px;
+}
+
+.contact-nav .item:nth-child(2) .icon {
+  width: 10px;
+  height: 16px;
+}
+
 .site-nav .link:hover,
 .site-nav .link:focus,
 .contact-nav .link:hover,
-.contact-nav .link:focus {
+.contact-nav .link:focus,
+.contact-nav .link:hover .icon {
   color: var(--accent-color);
-}
-
-.contact-nav .link::before {
-  content: ' ';
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 10px;
-}
-
-.contact-nav .item:nth-child(1) .link::before {
-  width: 16px;
-  height: 12px;
-  background-image: url(../images/envelope.svg);
-}
-
-.contact-nav .item:nth-child(2) .link::before {
-  width: 10px;
-  height: 16px;
-  background-image: url(../images/smartphone.svg);
+  fill: var(--accent-color);
 }
 
 /* main */
@@ -279,7 +278,6 @@ p {
   display: block;
   content: '';
   height: 120px;
-  background-size: 70px 70px;
   background-repeat: no-repeat;
   background-position: center;
   background-color: var(--bg-color-light);
@@ -366,33 +364,22 @@ p {
 }
 
 .social-links .link {
-  display: block;
+  display: flex;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-size: 20px;
-  background-repeat: no-repeat;
-  background-position: center;
+  fill: var(--color4);
+}
+
+.social-links .icon {
+  width: 20px;
+  height: 20px;
+  margin: auto;
 }
 
 .social-links .link:hover {
   background-color: var(--accent-color);
-}
-
-.link.instagram {
-  background-image: url(../images/instagram.svg);
-}
-
-.link.twitter {
-  background-image: url(../images/twitter.svg);
-}
-
-.link.facebook {
-  background-image: url(../images/facebook.svg);
-}
-
-.link.linkedin {
-  background-image: url(../images/linkedin.svg);
+  fill: var(--text-color-white);
 }
 
 /*page portfolio our work*/
