@@ -137,7 +137,7 @@ p {
   fill: var(--color3);
 }
 
-.contact-nav .item:nth-child(1) .icon {
+/* .contact-nav .item:nth-child(1) .icon {
   width: 16px;
   height: 12px;
 }
@@ -145,7 +145,7 @@ p {
 .contact-nav .item:nth-child(2) .icon {
   width: 10px;
   height: 16px;
-}
+} */
 
 .site-nav .link:hover,
 .site-nav .link:focus,
@@ -291,8 +291,8 @@ p {
 }
 
 .for-icon .icon {
-  width: 70px;
-  height: 70px;
+  /* width: 70px;
+  height: 70px; */
   margin: auto;
 }
 
@@ -380,14 +380,46 @@ p {
 }
 
 .social-links .icon {
-  width: 20px;
-  height: 20px;
+  /* width: 20px;
+  height: 20px; */
   margin: auto;
 }
 
 .social-links .link:hover {
   background-color: var(--accent-color);
   fill: var(--text-color-white);
+}
+
+/* Regular customers */
+.section .list-clients {
+  display: flex;
+  margin-left: -30px;
+}
+
+.list-clients .item {
+  margin-left: 30px;
+  flex-basis: calc(100% / 6 - 30px);
+}
+
+.list-clients .link {
+  display: flex;
+  width: 100%;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.list-clients .link:hover {
+  border: 1px solid var(--accent-color);
+}
+
+.list-clients .icon {
+  margin: auto;
+  fill: var(--color4);
+}
+
+.list-clients .link:hover .icon {
+  fill: var(--accent-color);
 }
 
 /*page portfolio our work*/
